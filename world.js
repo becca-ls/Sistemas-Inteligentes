@@ -39,6 +39,7 @@ class World {
       b.run();
       b.searchForFood(this.food)
       b.eat(this.food);
+      this.bloops = b.searchForPartner(this.bloops, i)
       // If it's dead, kill it and make food
       if (b.dead()) {
         this.bloops.splice(i, 1);
